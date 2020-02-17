@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Heebo:300&display=swap" rel="stylesheet">
   <title>Portland International Airport</title>
 </head>
+
 <body>
-  <h1>This is Drake's Title</h1>
-  
+  <!-- Top Nav Bar -->
+  <header class="header">
+    <h1 class="logo"><a href="#">Portland International Airport</a></h1>
+    <ul class="main-nav">
+      <li><a href="#">Flight Tracker</a></li>
+      <li><a href="./airport-info.html">Airport Info</a></li>
+      <li><a href="#">Additional Information</a></li>
+    </ul>
+  </header>
+
+  <!-- Welcome to PDX Main -->
+  <div id="splashwelcome">
+    <h1>Welcome to PDX</h1>
+  </div>
+
+  <!-- Splash Page Flight Tracker -->
+  <div id="flight-tracker">
+    <h1>Flight Information</h1>
+    <label for="flight">Enter a flight number (AA1):</label>
+    <input id="flight" type="text">
+    <button class="btn-success" id="flightInformation">Get Flight Information!</button>
+
+    <!-- Display Result Divs -->
+    <div class="showairline"></div>
+    <div class="showflightnumber"></div>
+    <div class="showdepart"></div>
+    <div class="showarrival"></div>
+    <div class="showaircraft"></div>
+  </div>
+  ​
 </body>
+
 </html>
