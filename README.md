@@ -6,6 +6,8 @@
 
 This is the Epicodus team week assignment for the week of February 17-20, 2020.  The purpose of this project is to develop a website dedicated to the Portland International Airport in Portland, Oregon.  The website will have information for travelers such as flight information, airport delays, and airport amenities such as restaurants, and shops.
 
+![Readme Cover](./img/readme.png)
+
 ## Behavior Driven Development Specifications
 
 | Specification             | Input 	|     Output      |
