@@ -4,6 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
+
 module.exports = {
   entry: './src/main.js',
   output: {
@@ -23,6 +24,10 @@ module.exports = {
       template: './src/index.html',
       inject: 'body'
     }),
+    new HtmlWebpackPlugin({
+      filename: 'airport-info.html',
+      template: './src/airport-info.html'
+    })
   ],
   module: {
     rules: [
