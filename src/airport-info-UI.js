@@ -15,6 +15,6 @@ export function airportUI() {
   }) ();
   
   function getElements(response) {
-    console.log(response);
+   console.log(response);
   }
 }
