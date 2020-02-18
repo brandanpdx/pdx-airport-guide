@@ -12,9 +12,24 @@ export class Map {
     });
   }
 
-  async getPlace() {
+  async getRestaurant() {
     try {
-      let response = await fetch (`https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants&location=45.5891,-122.5934&key=${process.env.GOOGLE_PLACE_API_KEY}`);
+      let response = await fetch (`https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurants,food&location=45.5891,-122.5934&key=${process.env.GOOGLE_PLACE_API_KEY}`);
+      let jsonifiedResponse;
+      if (response.ok && response.status == 200) {
+        jsonifiedResponse = await response.json();
+      } else {
+        jsonifiedResponse = false;
+      }
+      return jsonifiedResponse;
+    } catch (error) {
+      return false;
+    }
+  } 
+
+  async getStore() {
+    try {
+      let response = await fetch (`https://maps.googleapis.com/maps/api/place/textsearch/json?query=store&location=45.5891,-122.5934&key=${process.env.GOOGLE_PLACE_API_KEY}`);
       let jsonifiedResponse;
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();

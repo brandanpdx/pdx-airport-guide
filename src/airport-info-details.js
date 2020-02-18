@@ -1,6 +1,6 @@
 export function restaurantInfo (results) {
   let restaurant = {
-    name:`${results.icon}`
+    name:`${results.name}`
   };
   let restaurantDetails = `<div class="col-sm-4">${restaurant.name}</div>`;
   return restaurantDetails;
