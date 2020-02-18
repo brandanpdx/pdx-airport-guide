@@ -55,9 +55,14 @@ input#flight {
 	width: 25%;
 }
 
+#date {
+	margin-top: 10px;
+}
+
 
 button {
 	margin-top: 20px;
+	width: 50%;
 }
 
 ul {
