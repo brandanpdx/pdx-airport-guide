@@ -13,10 +13,10 @@ export function airportUI() {
   (async () => {
     let map = new Map();
     const response = await map.getRestaurant();
-    getElements(response);
+    getRestaurantElements(response);
   }) ();
   
-  function getElements(response) {
+  function getRestaurantElements(response) {
     console.log(response);
     
       response.results.forEach(function(results) {
