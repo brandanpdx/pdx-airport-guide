@@ -1,4 +1,5 @@
 import { Map } from './map-service';
+
 //import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -11,4 +12,15 @@ document.addEventListener("DOMContentLoaded", function() {
   Map.loadGoogleMapsApi().then(function(googleMaps) {
     Map.createMap(googleMaps, mapElement);
   });
+  
+  (async () => {
+    let map = new Map();
+    const response = await map.getPlace();
+    getElements(response);
+  }) ();
+
+  function getElements(response) {
+    console.log(response);
+  }
+
 });
