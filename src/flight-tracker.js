@@ -1,7 +1,7 @@
 export class FlightTracker {
   async getFlight(airline, flightNumber) {
     try {
-      let response = await fetch(`https://aerodatabox.p.rapidapi.com/flights/${airline}${flightNumber}/2019-08-29?withLocation=false&withAircraftImage=false`, {
+      let response = await fetch(`https://aerodatabox.p.rapidapi.com/flights/${airline}${flightNumber}/2020-02-20?withLocation=false&withAircraftImage=false`, {
         "method": "GET",
         "headers": {
           "x-rapidapi-host": "aerodatabox.p.rapidapi.com",
