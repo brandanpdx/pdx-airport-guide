@@ -12,16 +12,37 @@ export function restaurantInfo (results) {
     }
 
   let price = `${results.price_level}`;
-    if(price == null) {
-      price = "x"
-    } else {
-      price;
+  let priceIcon;
+    if(price == "undefined") {
+      priceIcon = ""
+    } else if (price){
+      if(price == 1){
+        priceIcon = "Price level: $"
+      }else if(price == 2){
+        priceIcon = "Price level: $$"
+      }else if(price == 3){
+        priceIcon = `Price level: $$$`
+      }else if(price == 4){
+        priceIcon = `Price level: $$$$`
+      }
     }
- 
+
   let restaurantDetails = 
-  `<div class="col-sm-4">${restaurant.name}<br>
-   <img src='${restaurant.image}'<br>
-   Open now: ${openNow}<br>
-   Price level: ${price}</div>`;
+  `<div class="card" style="width:18rem;">
+    <div class="card-header" style="height:4rem;">
+      <h5 class="mb-0">
+      ${restaurant.name}
+      </h5>
+    </div>
+      <div class="card-body">
+      <img src='${restaurant.image}'<br>
+      Open now: ${openNow}<br>
+      ${priceIcon}
+      </div>
+  </div>
+</div>`;
+    
   return restaurantDetails;
 }
+
+
