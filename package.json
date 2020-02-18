@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "google-places-web": "^1.0.1",
     "jquery": "^3.4.1",
     "load-google-maps-api": "^2.0.1",
     "popper.js": "^1.16.1"
