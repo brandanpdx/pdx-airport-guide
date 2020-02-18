@@ -1,6 +1,5 @@
 import { Map } from './map-service';
-
-//import $ from 'jquery';
+import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
