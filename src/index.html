@@ -27,7 +27,7 @@
     <div id="flight-tracker">
       <p>Find an arriving or departing flight</p>
       <div class="airlineselect">
-        <select class = "selectpicker">
+        <select class="selectpicker">
           <option value="null">Airline:</option>
           <option value="ACA">Air Canada</option>
           <option value="AS">Alaska</option>
@@ -37,12 +37,22 @@
           <option value="HAL">Hawaiian</option>
           <option value="JBU">jetBlue</option>
           <option value="WN">Southwest</option>
-          <option value="NK">Spirit</option>
           <option value="UA">United</option>
         </select>
       </div>
-      <input id="flight" placeholder="Flight #" type="text"> <br>
+
+      <input id="flight" placeholder="Flight #" type="text"> 
+      
+      <br>
+
+      <input type="date" id="date" min="2018-01-01" max="2099-12-31"> 
+      <br>
+
       <button class="btn-info" id="flightInformation">Search</button>
+
+      <div id="datepicker"></div>
+
+
 
       <!-- Display Result Divs -->
       <div class="showFlight"></div>

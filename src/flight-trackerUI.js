@@ -5,11 +5,12 @@ export function flightTrackerUI() {
   $("#flightInformation").click(function() {
     const airline = $(".selectpicker").val();
     const flightNumber = $('#flight').val();
+    const date = $('#date').val();
     console.log(airline);
     console.log(flightNumber);
     (async () => {
       let tracker = new FlightTracker();
-      const response = await tracker.getFlight(airline, flightNumber); 
+      const response = await tracker.getFlight(airline, flightNumber, date); 
       getElements(response);
     })();
     function getElements(response) {
@@ -28,4 +29,5 @@ export function flightTrackerUI() {
       }
     }
   })
+  
 }
