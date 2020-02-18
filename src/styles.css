@@ -122,6 +122,13 @@ a {
 	opacity: 0.8;
 }
 
+.card {
+	margin-top: 20px;
+}
+h6 {
+	color: gray;
+}
+
 /* .fullscreen-bg {
   position: fixed;
   top: 0;
