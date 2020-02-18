@@ -46,14 +46,13 @@ $(document).ready(function() {
 })
 
   
-  (async () => {
-    let map = new Map();
-    const response = await map.getPlace();
-    getElements(response);
-  }) ();
+  // (async () => {
+  //   let map = new Map();
+  //   const response = await map.getPlace();
+  //   getElements(response);
+  // }) ();
 
-  function getElements(response) {
-    console.log(response);
-  }
+  // function getElements(response) {
+  //   console.log(response);
+  // }
 
-});
