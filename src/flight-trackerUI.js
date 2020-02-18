@@ -5,15 +5,12 @@ export function flightTrackerUI() {
   $("#flightInformation").click(function() {
     const airline = $(".selectpicker").val();
     const flightNumber = $('#flight').val();
-    console.log(airline);
-    console.log(flightNumber);
     (async () => {
       let tracker = new FlightTracker();
       const response = await tracker.getFlight(airline, flightNumber); 
       getElements(response);
     })();
     function getElements(response) {
-      console.log(response);
       if (response === false) {
         alert("false");
       }
@@ -21,11 +18,11 @@ export function flightTrackerUI() {
         alert("none");
       }
       else {
-        $(".showFlight").html("<br>" + response[0].departure.airport.iata + " to " + response[0].arrival.airport.iata);
-       
-        console.log(response[0].departure.airport.municipalityName)
-        // $(".showairline").text(response)
+        $("#showFlight").html(response[0].number);
+        $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
+        $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
+        $("#showAirline").html(response[0].airline.name);      
       }
     }
-  })
+  });
 }
