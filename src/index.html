@@ -3,13 +3,14 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Heebo:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
   <title>Portland International Airport</title>
 </head>
 
 <body>
   <!-- Top Nav Bar -->
   <header class="header">
-    <h1 class="logo"><a href="#">Portland International Airport</a></h1>
+    <h1 class="logo"><a href="./index.html">Portland International Airport</a></h1>
     <ul class="main-nav">
       <li><a href="#">Flight Tracker</a></li>
       <li><a href="./airport-info.html">Airport Info</a></li>
@@ -17,24 +18,39 @@
     </ul>
   </header>
 
-  <!-- Welcome to PDX Main -->
   <div id="splashwelcome">
-    <h1>Welcome to PDX</h1>
+    <h1>Welcome to Portland</h1>
   </div>
 
-  <!-- Splash Page Flight Tracker -->
-  <div id="flight-tracker">
-    <h1>Flight Information</h1>
-    <label for="flight">Enter a flight number (AA1):</label>
-    <input id="flight" type="text">
-    <button class="btn-success" id="flightInformation">Get Flight Information!</button>
+  <div class="splashcontainer">
+    <!-- Splash Page Flight Tracker -->
+    <div id="flight-tracker">
+      <p>Find an arriving or departing flight</p>
+      <div class="airlineselect">
+        <select class = "selectpicker">
+          <option value="null">Airline:</option>
+          <option value="ACA">Air Canada</option>
+          <option value="AS">Alaska</option>
+          <option value="AA">American</option>
+          <option value="DAL">Delta</option>
+          <option value="FFT">Frontier</option>
+          <option value="HAL">Hawaiian</option>
+          <option value="JBU">jetBlue</option>
+          <option value="WN">Southwest</option>
+          <option value="NK">Spirit</option>
+          <option value="UA">United</option>
+        </select>
+      </div>
+      <input id="flight" placeholder="Flight #" type="text"> <br>
+      <button class="btn-info" id="flightInformation">Search</button>
 
-    <!-- Display Result Divs -->
-    <div class="showairline"></div>
-    <div class="showflightnumber"></div>
-    <div class="showdepart"></div>
-    <div class="showarrival"></div>
-    <div class="showaircraft"></div>
+      <!-- Display Result Divs -->
+      <div class="showairline"></div>
+      <div class="showflightnumber"></div>
+      <div class="showdepart"></div>
+      <div class="showarrival"></div>
+      <div class="showaircraft"></div>
+    </div>
   </div>
   ​
 </body>
