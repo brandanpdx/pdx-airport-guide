@@ -1,8 +1,5 @@
 export class FlightTracker {
   async getFlight(airline, flightNumber, date) {
-    console.log(airline)
-    console.log(flightNumber)
-    console.log(date);
     try {
       let response = await fetch(`https://aerodatabox.p.rapidapi.com/flights/${airline}${flightNumber}/${date}?withLocation=false&withAircraftImage=false`, {
         "method": "GET",
