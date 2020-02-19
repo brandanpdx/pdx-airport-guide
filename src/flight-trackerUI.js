@@ -24,10 +24,10 @@ export function flightTrackerUI() {
       else {
         $(".showFlight").html("<br>" + response[0].departure.airport.iata + " to " + response[0].arrival.airport.iata);
        
-        console.log(response[0].departure.airport.municipalityName)
+        console.log(response[0].departure.airport.municipalityName);
         // $(".showairline").text(response)
       }
     }
-  })
+  });
   
 }
