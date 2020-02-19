@@ -22,7 +22,8 @@ export function flightTrackerUI() {
         $("#showFlight").html(response[0].number);
         $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
         $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
-        $("#showAirline").html(response[0].airline.name);      
+        $("#showAirline").html(response[0].airline.name);   
+        $("#showAircraft").html(response[0].aircraft.model);        
       }
     }
   });
