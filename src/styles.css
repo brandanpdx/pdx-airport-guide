@@ -160,6 +160,11 @@ h6 {
 	color: white;
 }
 
+#bcsecuritycard, #desecuritycard {
+	background-color: #f4f4f4cb;
+}
+
+
 
 @media (min-width: 769px) {
 	.header,
