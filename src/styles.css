@@ -185,3 +185,13 @@ h6 {
 	}
 
 }
+
+/* ======= For Modal ========= */
+#showFlight {
+	color: rgb(24, 105, 105);
+	text-decoration-line: underline;
+}
+
+.modal-title {
+	color: #d81b6a;
+}

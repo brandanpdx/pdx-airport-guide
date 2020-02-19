@@ -31,6 +31,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'securityinfo.html',
       template: './src/securityinfo.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'airline-info.html',
+      template: './src/airline-info.html'
     })
   ],
   module: {
