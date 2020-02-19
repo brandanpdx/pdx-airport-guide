@@ -187,11 +187,22 @@ h6 {
 }
 
 /* ======= For Modal ========= */
+.modal {
+	background-color: #fad6d0;
+	
+}
+.modal-dialog {
+	margin-top: 300px;
+}
+
 #showFlight {
-	color: rgb(24, 105, 105);
+	color: rgb(39, 167, 167);
 	text-decoration-line: underline;
 }
 
+.close {
+	text-align: right;
+}
 .modal-title {
-	color: #d81b6a;
+	color: #d11764;
 }
