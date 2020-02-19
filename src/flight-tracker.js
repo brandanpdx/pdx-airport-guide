@@ -1,8 +1,10 @@
 export class FlightTracker {
-  async getFlight(flightNumber) {
+  async getFlight(airline, flightNumber, date) {
+    console.log(airline)
     console.log(flightNumber)
+    console.log(date);
     try {
-      let response = await fetch(`https://aerodatabox.p.rapidapi.com/flights/DL47/2019-08-29?withLocation=false&withAircraftImage=false`, {
+      let response = await fetch(`https://aerodatabox.p.rapidapi.com/flights/${airline}${flightNumber}/${date}?withLocation=false&withAircraftImage=false`, {
         "method": "GET",
         "headers": {
           "x-rapidapi-host": "aerodatabox.p.rapidapi.com",
@@ -16,7 +18,7 @@ export class FlightTracker {
       } else {
         jsonifiedResponse = false;
       }
-      console.log(jsonifiedResponse);
+    
       return jsonifiedResponse;
     } catch (error) {
       return false;

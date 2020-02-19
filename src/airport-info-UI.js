@@ -3,7 +3,6 @@ import { restaurantInfo, storeInfo } from './airport-info-details';
 import $ from 'jquery';
 
 export function airportUI() {
-  //event.preventDefault();
   let mapElement = document.getElementById('map');
   
   Map.loadGoogleMapsApi().then(function(googleMaps) {
@@ -35,6 +34,4 @@ export function airportUI() {
       $("#shops").append(storeInfo(results));
       })
   }
-
-
 }

@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css?family=Heebo:300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
   <title>Airport Information</title>
 </head>
 <body>
   <header class="header">
-    <h1 class="logo"><a href="#">Portland International Airport</a></h1>
+    <h1 class="logo"><a href="./index.html">Portland International Airport</a></h1>
     <ul class="main-nav">
       <li><a href="#">Flight Tracker</a></li>
       <li><a href="./airport-info.html">Airport Info</a></li>
       <li><a href="#">Additional Information</a></li>
     </ul>
   </header>
+  <br>
   <div class="container">
-    <div id="map">
-      <script src="./map-service.js" defer></script>
+    <div class="row">
+      <div class="col-lg-10"> 
+        <div id="map" >
+        </div>
+      </div>
     </div>
+    <br>
     <br>
     <div id="accordion">
       <div class="card">
@@ -26,52 +33,30 @@
             </button>
           </h5>
         </div>
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
             <div class="row" id="shops">
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title"></h5>
-                  <p class="card-text"></p>
-                  <a href="#" class="card-link">Card link</a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
+      <br>
       <div class="card">
         <div class="card-header" id="headingTwo">
           <h5 class="mb-0">
             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Restaurants
+              Dinings
             </button>
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body">
             <div class="row" id="restaurants">
-              
             </div>
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Security Checkpoints
-            </button>
-          </h5>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-          <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-          </div>
-        </div>
-      </div>
     </div>
-    
   </div>
 </body>
 
