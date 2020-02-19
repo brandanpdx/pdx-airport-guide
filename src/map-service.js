@@ -1,4 +1,5 @@
 const loadGoogleMapsApi = require('load-google-maps-api');
+//const  marker = require('google-map-marker');
 
 export class Map {
   
@@ -8,7 +9,21 @@ export class Map {
   static createMap(googleMaps, mapElement) {
     return new googleMaps.Map(mapElement, {
       center: { lat: 45.5891, lng: -122.5934 },
-      zoom: 17
+      zoom: 17,
+      markers: [
+        {
+            marker : "http://lucienconsulting.com/_/images/map_logo.png", 
+            title : "Lucien Consulting",
+            latLng : {
+                lat: 45.5891,
+                lng: -122.5934
+            },
+            size : {
+                w: 50,
+                h: 76,
+            }
+        }
+      ]
     });
   }
 

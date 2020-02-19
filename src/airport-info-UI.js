@@ -1,9 +1,8 @@
 import { Map } from './map-service.js';
-import { restaurantInfo } from './airport-info-details';
+import { restaurantInfo, storeInfo } from './airport-info-details';
 import $ from 'jquery';
 
 export function airportUI() {
-  //event.preventDefault();
   let mapElement = document.getElementById('map');
   
   Map.loadGoogleMapsApi().then(function(googleMaps) {
@@ -16,13 +15,23 @@ export function airportUI() {
     getRestaurantElements(response);
   }) ();
   
-  function getRestaurantElements(response) {
+  function  getRestaurantElements(response) {
     console.log(response);
-    
-      response.results.forEach(function(results) {
-        $("#restaurants").append(restaurantInfo(results))
-       })
-    
-    
+    response.results.forEach(function(results) {
+      $("#restaurants").append(restaurantInfo(results))
+      })
+  }
+
+  (async () => {
+    let map = new Map();
+    const response = await map.getStore();
+    getStoreElements(response);
+  }) ();
+  
+  function  getStoreElements(response) {
+    console.log(response);
+    response.results.forEach(function(results) {
+      $("#shops").append(storeInfo(results));
+      })
   }
 }
