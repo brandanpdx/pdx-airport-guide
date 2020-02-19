@@ -12,6 +12,20 @@ export function flightTrackerUI() {
       getElements(response);
     })();
     function getElements(response) {
+      let fullDepartureTime = response[0].departure.scheduledTimeLocal;
+      let shortDepartureTime = fullDepartureTime.slice(11, 16);
+      let year = fullDepartureTime.slice(0,4);
+      let month = fullDepartureTime.slice(5, 7);
+      let day = fullDepartureTime.slice(8,10);
+      let fullArrivalTime = response[0].arrival.scheduledTimeLocal;
+      let shortArrivalTime = fullArrivalTime.slice(11,16);
+      console.log(shortDepartureTime);
+      console.log(shortArrivalTime);
+      console.log(month);
+      console.log(day);
+      console.log(year);
+      console.log(fullDepartureTime);
+
       if (response === false) {
         alert("false");
       }
@@ -23,7 +37,11 @@ export function flightTrackerUI() {
         $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
         $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
         $("#showAirline").html(response[0].airline.name);   
-        $("#showAircraft").html(response[0].aircraft.model);        
+        $("#showAircraft").html(response[0].aircraft.model); 
+        $("#showDateTime").html(month + "." + day + "." + year);
+        $("#showDepartureTime").html(shortDepartureTime);
+        $("#showArrivalTime").html(shortArrivalTime);
+               
       }
     }
   });
