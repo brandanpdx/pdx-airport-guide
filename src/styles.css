@@ -67,6 +67,10 @@ body {
 	color: white;
 }
 
+#map {
+	margin-top: 100px;
+}
+
 input#flight {
 	margin-top: 10px;
 	width: 25%;
