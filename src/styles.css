@@ -168,6 +168,16 @@ td {
 	margin-top: 20px;
 	background-color: #d4e0e9;
 }
+#departureDate {
+	width: 10%;
+}
+.departureDate {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
 
 h6 {
 	color: gray;
