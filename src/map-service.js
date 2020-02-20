@@ -10,20 +10,6 @@ export class Map {
     return new googleMaps.Map(mapElement, {
       center: { lat: 45.5891, lng: -122.5934 },
       zoom: 17,
-      markers: [
-        {
-            marker : "http://lucienconsulting.com/_/images/map_logo.png", 
-            title : "Lucien Consulting",
-            latLng : {
-                lat: 45.5891,
-                lng: -122.5934
-            },
-            size : {
-                w: 50,
-                h: 76,
-            }
-        }
-      ]
     });
   }
 
@@ -41,6 +27,22 @@ export class Map {
       return false;
     }
   } 
+
+  // async getImage(image) {
+  //   try {
+  //     let response = await fetch (`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${image}&key=${process.env.GOOGLE_PLACE_API_KEY}
+  //     `);
+  //     let jsonifiedResponse;
+  //     if (response.ok && response.status == 200) {
+  //       jsonifiedResponse = await response.json();
+  //     } else {
+  //       jsonifiedResponse = false;
+  //     }
+  //     return jsonifiedResponse;
+  //   } catch (error) {
+  //     return false;
+  //   }
+  // } 
 
   async getStore() {
     try {
