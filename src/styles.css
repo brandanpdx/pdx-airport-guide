@@ -223,6 +223,32 @@ h6 {
 
 
 
+
+.baditems {
+	margin-top: 25px;
+}
+
+.baditems h1{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 30px;
+	color: white;
+	text-shadow: 2px 2px 10px white(0, 0, 0, 0.5);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.baditems p {
+	color: white;
+}
+
+.baditems h4 {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+
+
+
+
 @media (min-width: 769px) {
 	.header,
 	.main-nav {
