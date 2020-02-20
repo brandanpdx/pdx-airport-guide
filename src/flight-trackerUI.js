@@ -42,8 +42,7 @@ export function flightTrackerUI() {
           location.reload();
         });
       } else {
-
-          $(".card").show();
+          $("#flightResult").show();
           $("#showFlight").html(response[0].number);
           $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
           $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
@@ -57,14 +56,7 @@ export function flightTrackerUI() {
 
     function getAircraftElements(responseAirline) {
       $(".openModal").click(function () {
-        if (responseAirline === false) {
-          $("#errorModal").show();
-          $(".errorMsg").html("There are no detail information of this aircraft.");
-          $(".close").click(function() {
-            $("#errorModal").hide();
-            location.reload();
-          });
-        } else {  
+        if (responseAirline) {
           $("#airlineModal").show();
           $(".modal-title").html(responseAirline.airlineName);
           $("#displayType").html(responseAirline.typeName);
@@ -75,6 +67,13 @@ export function flightTrackerUI() {
             $("#airlineModal").hide();
             location.reload();
           });  
+        } else {  
+          $("#errorModal").show();
+          $(".errorMsg").html("There are no detail information of this aircraft.");
+          $(".close").click(function() {
+            $("#errorModal").hide();
+            location.reload();
+          });
         }  
       });
     }
