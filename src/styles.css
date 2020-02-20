@@ -15,7 +15,7 @@
 }
 
 #headingOne, #headingTwo {
-	background-color: rgb(206, 190, 218);
+	background-color: rgb(173, 182, 196);
 }
 
 /* =========== */
@@ -191,6 +191,7 @@ h6 {
 
 }
 
+=======
 /* ======= For Modal ========= */
 .modal {
 	background-color: #fad6d0;
@@ -211,3 +212,4 @@ h6 {
 .modal-title {
 	color: #d11764;
 }
+

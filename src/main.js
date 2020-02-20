@@ -10,6 +10,7 @@ import { flightTrackerUI } from './flight-trackerUI';
 $(document).ready(function() {
   airportUI();
   flightTrackerUI();
+
 });
 
 
