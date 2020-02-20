@@ -1,5 +1,4 @@
 const loadGoogleMapsApi = require('load-google-maps-api');
-//const  marker = require('google-map-marker');
 
 export class Map {
   
@@ -27,22 +26,6 @@ export class Map {
       return false;
     }
   } 
-
-  // async getImage(image) {
-  //   try {
-  //     let response = await fetch (`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${image}&key=${process.env.GOOGLE_PLACE_API_KEY}
-  //     `);
-  //     let jsonifiedResponse;
-  //     if (response.ok && response.status == 200) {
-  //       jsonifiedResponse = await response.json();
-  //     } else {
-  //       jsonifiedResponse = false;
-  //     }
-  //     return jsonifiedResponse;
-  //   } catch (error) {
-  //     return false;
-  //   }
-  // } 
 
   async getStore() {
     try {
