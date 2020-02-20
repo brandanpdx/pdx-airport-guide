@@ -1,4 +1,4 @@
-export function restaurantInfo (results, details, imageId) {
+export function restaurantInfo (results) {
   let restaurant = {
     name:`${results.name}`,
     image:`${results.icon}`
@@ -27,7 +27,6 @@ export function restaurantInfo (results, details, imageId) {
     }
   }
 
-  // let link = `${results.photos[0].html_attributions}`
   let address = `${results.formatted_address}`;
   let restaurantDetails = 
   `<div class="card" style="width:18rem; display:flex; margin: 1rem auto;">
@@ -45,8 +44,6 @@ export function restaurantInfo (results, details, imageId) {
   </div>`;
     
   return restaurantDetails;
-  // let details = restaurantDetails;
-  // let imageId = `${results.photos[0].photo_reference}`;
 }
 
 export function storeInfo (results) {
@@ -96,10 +93,3 @@ export function storeInfo (results) {
 
   return storeDetails;
 }
-
-
-// export function restaurantImages (results) {
-//   let photoRef = `${results.photos[0].photo_reference}`
-  
-//     return photoRef
-//   };

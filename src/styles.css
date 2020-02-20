@@ -296,3 +296,6 @@ h6 {
 	color: #d11764;
 }
 
+#showFlight:hover {
+	cursor: pointer;
+}
