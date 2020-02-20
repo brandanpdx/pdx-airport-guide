@@ -41,6 +41,7 @@ export function flightTrackerUI() {
             location.reload();
           });
       } else {
+          $(".card").show();
           $("#showFlight").html(response[0].number);
           $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
           $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
