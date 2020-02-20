@@ -6,6 +6,7 @@ export function flightTrackerUI() {
     const airline = $(".selectpicker").val();
     const flightNumber = $('#flight').val();
     const date = $('#date').val();
+    $('.card').show();
     let tracker = new FlightTracker();
     let reg;
 
@@ -34,20 +35,20 @@ export function flightTrackerUI() {
           location.reload();
         });  
       } else if (response === 0) {
-          $("#errorModal").show();
-          $(".errorMsg").html("there are no flight schedule meet your search criteria.");
-          $(".close").click(function() {
-            $("#errorModal").hide();
-            location.reload();
-          });
+        $("#errorModal").show();
+        $(".errorMsg").html("there are no flight schedule meet your search criteria.");
+        $(".close").click(function() {
+          $("#errorModal").hide();
+          location.reload();
+        });
       } else {
-          $("#showFlight").html(response[0].number);
-          $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
-          $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
-          $("#showAirline").html(response[0].airline.name);   
-          $("#showDateTime").html(month + "." + day + "." + year);
-          $("#showDepartureTime").html(shortDepartureTime);
-          $("#showArrivalTime").html(shortArrivalTime);   
+        $("#showFlight").html(response[0].number);
+        $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
+        $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
+        $("#showAirline").html(response[0].airline.name);   
+        $("#showDateTime").html(month + "." + day + "." + year);
+        $("#showDepartureTime").html(shortDepartureTime);
+        $("#showArrivalTime").html(shortArrivalTime);   
       }
     }
 
