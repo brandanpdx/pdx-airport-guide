@@ -163,10 +163,13 @@ td {
 	border: 1px solid black;
 	padding: 5px;
 }
-.card {
+#flightResult {
 	display: none;
+}
+.card {
 	margin-top: 20px;
-	background-color: #d4e0e9;
+	background-color: #d4e0e996;
+
 }
 
 h6 {
@@ -208,10 +211,10 @@ h6 {
 
 }
 
-=======
+
 /* ======= For Modal ========= */
 .modal {
-	background-color: #fad6d0;
+	background-color: #f1bbb27c;
 	
 }
 .modal-dialog {
