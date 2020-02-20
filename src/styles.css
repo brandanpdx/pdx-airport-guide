@@ -144,15 +144,31 @@ a {
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-
-	
 }
-
+.flightInfo {
+	margin: 200px;
+}
+table {
+	background-color: rgb(52, 73, 94, 0.2);
+	border: 1px solid black;
+	width: 100%;
+}
+th {
+	text-align: center;
+	border: 1px solid black;
+	height: 50px;
+}
+td {
+	text-align: center;
+	border: 1px solid black;
+	padding: 5px;
+}
 .card {
-	margin-top: 20px;
-	background-color: #fdfce6;
 	display: none;
+	margin-top: 20px;
+	background-color: #d4e0e9;
 }
+
 h6 {
 	color: gray;
 }

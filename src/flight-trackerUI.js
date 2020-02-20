@@ -42,13 +42,16 @@ export function flightTrackerUI() {
           location.reload();
         });
       } else {
-        $("#showFlight").html(response[0].number);
-        $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
-        $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
-        $("#showAirline").html(response[0].airline.name);   
-        $("#showDateTime").html(month + "." + day + "." + year);
-        $("#showDepartureTime").html(shortDepartureTime);
-        $("#showArrivalTime").html(shortArrivalTime);   
+
+          $(".card").show();
+          $("#showFlight").html(response[0].number);
+          $("#showDeparture").html(response[0].departure.airport.municipalityName + " (" + response[0].departure.airport.iata + ")");
+          $("#showArrival").html(response[0].arrival.airport.municipalityName + " (" + response[0].arrival.airport.iata + ")");  
+          $("#showAirline").html(response[0].airline.name);   
+          $("#showDateTime").html(month + "." + day + "." + year);
+          $("#showDepartureTime").html(shortDepartureTime);
+          $("#showArrivalTime").html(shortArrivalTime);   
+
       }
     }
 
