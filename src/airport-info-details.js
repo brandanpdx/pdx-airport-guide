@@ -30,9 +30,9 @@ export function restaurantInfo (results, details, imageId) {
   // let link = `${results.photos[0].html_attributions}`
   let address = `${results.formatted_address}`;
   let restaurantDetails = 
-  `<div class="card" style="width:18rem;">
+  `<div class="card" style="width:18rem; display:flex; margin: 1rem auto;">
     <div class="card-header" style="height:4rem; background-color:rgb(162, 174, 192);">
-      <h5 style="color:#34495e;" class="mb-0" >
+      <h5 style="color: rgb(52, 73, 94);" class="mb-0" >
       <strong>${restaurant.name}</strong>
       </h5>
     </div>
@@ -40,7 +40,7 @@ export function restaurantInfo (results, details, imageId) {
     <img src='${restaurant.image}'><br>
     <strong>Open now:</strong> ${openNow}<br>
     ${priceIcon}<br>
-      <strong>Adress:</strong> ${address}
+      <strong>Address:</strong> ${address}
     </div>
   </div>`;
     
@@ -80,17 +80,17 @@ export function storeInfo (results) {
   let address = `${results.formatted_address}`;
 
   let storeDetails = 
-  `<div class="card" style="width:18rem;">
+  `<div class="card" style="width:18rem; display:flex; margin: 1rem auto;">
   <div class="card-header" style="height:4rem; background-color:rgb(177, 183, 192);">
-    <h5 style="color:#34495e;" class="mb-0" >
+    <h5 style="color:rgb(52, 73, 94);" class="mb-0" >
       <strong>${store.name}</strong>
       </h5>
     </div>
-    <div class="card-body">
+    <div class="card-body" >
       <img src='${store.image}'><br>
       <strong>Open now:</strong> ${openNow}<br>
       ${priceIcon}<br>
-      <strong>Adress:</strong> ${address}
+      <strong>Address:</strong> ${address}
     </div>
   </div>`;
 
