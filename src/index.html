@@ -4,7 +4,6 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Heebo:300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap" rel="stylesheet">
-  <script src="./jquery.background-video.js"></script>
   <title>Portland International Airport</title>
 </head>
 
@@ -14,9 +13,8 @@
   <header class="header">
     <h1 class="logo"><a href="./index.html">Portland International Airport</a></h1>
     <ul class="main-nav">
-      <li><a href="#">Flight Tracker</a></li>
       <li><a href="./airport-info.html">Airport Info</a></li>
-      <li><a href="#">Additional Information</a></li>
+      <li><a href="./securityinfo.html">Security Information</a></li>
     </ul>
   </header>
 
@@ -43,33 +41,113 @@
         </select>
       </div>
 
-      <input id="flight" placeholder="Flight #" type="text"> 
-      
+      <input id="flight" placeholder="Flight #" type="text">
+
       <br>
 
-      <input type="date" id="date" min="2018-01-01" max="2099-12-31"> 
+      <input type="date" id="date" min="2018-01-01" max="2099-12-31">
       <br>
 
       <button class="btn-info" id="flightInformation">Search</button>
 
     </div>
-   
-     <div class="card">
-       <h4 class="card-header text-center">FLIGHT INFORMATION</h4>
-       <div class="card-body">
-        <h6 class="ticket-title text-left">CARRIER:</h5>
-          <p id="showAirline"></p>
-        <h6 class="ticket-title text-left">FLIGHT:</h5>
-        <p id="showFlight"></p>
-        <h6 class="ticket-title text-left">FROM:</h5>
-        <p id="showDeparture"></p>
-        <h6 class="ticket-title text-left">TO:</h5>
-        <p id="showArrival"></p>
-        <h6 class="ticket-title text-left">AIRCRAFT</h5> <p id="showAircraft"></p>
-        <h6 class="ticket-title text-left">DATE & TIME:</h5>
-        <p id="showDateTime"></p>
-       </div>
-     </div>
+
+    <div class="card">
+      <h4 class="card-header text-center">FLIGHT INFORMATION</h4>
+      <div class="card-body">
+        <h6 class="ticket-title text-center">DATE</h6>
+        <p class="text-center" id="showDateTime"></p>
+        <h6 class="ticket-title text-center">FLIGHT STATUS</h6>
+        <p class="text-center">On Time</p>
+        <div class="row">
+          <div class="col-sm-6">
+            <h6 class="ticket-title text-left">CARRIER</h6>
+            <p id="showAirline"></p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="ticket-title text-left">FLIGHT</h6>
+            <strong><a class="openModal">
+                <p id="showFlight"></p>
+              </a></strong>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <h6 class="ticket-title text-left">FROM</h6>
+            <p id="showDeparture"></p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="ticket-title text-left">TO</h6>
+            <p id="showArrival"></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <h6 class="ticket-title text-left">DEPARTS</h6>
+            <p id="showDepartureTime"></p>
+          </div>
+          <div class="col-sm-6">
+            <h6 class="ticket-title text-left">ARRIVES</h6>
+            <p id="showArrivalTime"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal for aircraft detail info -->
+    <div class="modal" tabindex="-1" role="dialog" id="airlineModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <strong>
+              <h4 class="modal-title"></h4>
+            </strong>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <h6 class="ticket-title text-left">AIRCRAFT TYPE</h6>
+                <P id="displayType"></P>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="ticket-title text-left">ENGINE TYPE</h6>
+                <P id="displayEngine"></P>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <h6 class="ticket-title text-left">1st FLIGHT DATE</h6>
+                <P id="display1stDate"></P>
+              </div>
+              <div class="col-sm-6">
+                <h6 class="ticket-title text-left">AGE YEARS</h6>
+                <P id="displayAge"></P>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary close" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal for error message -->
+    <div class="modal" tabindex="-1" role="dialog" id="errorModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="errorMsg"></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- <div class="fullscreen-bg">
       <video loop muted autoplay class="fullscreen-bg__video">
@@ -79,4 +157,5 @@
 
   </div>
 </body>
+
 </html>
