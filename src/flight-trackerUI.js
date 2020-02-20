@@ -11,13 +11,16 @@ export function flightTrackerUI() {
     let reg;
 
     (async () => {
-      const response = await tracker.getFlight(airline, flightNumber, date); 
+      const response = await tracker.getFlight(airline, flightNumber, date);
+      console.log('response: ', response);
+       
       await getElements(response);
       const responseAirline = await tracker.getAircraftInfo(reg); 
       getAircraftElements(responseAirline);
     })();
 
     function getElements(response) {
+      console.log(response);
       let fullDepartureTime = response[0].departure.scheduledTimeLocal;
       let shortDepartureTime = fullDepartureTime.slice(11, 16);
       let year = fullDepartureTime.slice(0,4);
@@ -34,13 +37,13 @@ export function flightTrackerUI() {
           $("#errorModal").hide();
           location.reload();
         });  
-      } else if (response === 0) {
-        $("#errorModal").show();
-        $(".errorMsg").html("there are no flight schedule meet your search criteria.");
-        $(".close").click(function() {
-          $("#errorModal").hide();
-          location.reload();
-        });
+      } else if (response == 0) {
+          $("#errorModal").show();
+          $(".errorMsg").html("There are no flight schedule meet your search criteria. Please submit valid criteria.");
+          $(".close").click(function() {
+            $("#errorModal").hide();
+            location.reload();
+          });
       } else {
           $("#flightResult").show();
           $("#showFlight").html(response[0].number);
@@ -50,7 +53,6 @@ export function flightTrackerUI() {
           $("#showDateTime").html(month + "." + day + "." + year);
           $("#showDepartureTime").html(shortDepartureTime);
           $("#showArrivalTime").html(shortArrivalTime);   
-
       }
     }
 

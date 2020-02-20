@@ -16,7 +16,6 @@ export function airportUI() {
   }) ();
   
   function  getRestaurantElements(response) {
-    console.log(response);
     response.results.forEach(function(results) {
       $("#restaurants").append(restaurantInfo(results));
     });
@@ -29,7 +28,6 @@ export function airportUI() {
   }) ();
   
   function  getStoreElements(response) {
-    console.log(response);
     response.results.forEach(function(results) {
       $("#shops").append(storeInfo(results));
     });
