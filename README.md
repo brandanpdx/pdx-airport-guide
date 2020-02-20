@@ -10,12 +10,12 @@ This is the Epicodus team week assignment for the week of February 17-20, 2020. 
 
 ## Behavior Driven Development Specifications
 
-| Specification<img width=800/> | Input <img width=400/> | Output <img width=400/> |
+| Specification<img width=800/> | Input <img width=400/> | Output <img width=500/> |
 | :---------------------------	| :--------------------- | :---------------------- |
 | In SPLASH page, the program will return flight informaiton based on submitted user input | Airline: United</br>Fligh#: 1</br>mm/dd/yyyy: 02/20/2020 | Flight Status: On time</br>Carrier: United</br>Flight: **UA1**</br>From: San Francisco(SFO)</br>To: Singapore(SIN)</br>Departs: 22:35</br>Arrives: 08:00 |
 | The program will display detail informaition of aircraft when user clicks the flight code | Click **UA1** | United Airlines</br>Aircraft Type: Boeing 787-9</br>Engine Type: Jet</br>1st Flight Date: 2014-10-16</br>Age Years: 5.5 |
 | In AIRPORT INFO page, the program displays GOOGLE MAP and will show a list of shops and restaurants when user clicks the button | Click **shops** | List of shops with detail information |
-| In SECURITY INFO page, the program displays security check infromaiton | | PDX Security Informaiton |
+| In SECURITY INFO page, the program displays security detial infromaiton | | PDX Security Informaiton |
 | In FLIGHT INFO page, the program will display flight schedule based on submitted date | 02/20/2020 | List of flight schedules |
 
 
