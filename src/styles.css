@@ -151,6 +151,7 @@ a {
 .card {
 	margin-top: 20px;
 	background-color: #fdfce6;
+	display: none;
 }
 h6 {
 	color: gray;
