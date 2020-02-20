@@ -18,8 +18,8 @@ export function airportUI() {
   function  getRestaurantElements(response) {
     console.log(response);
     response.results.forEach(function(results) {
-      $("#restaurants").append(restaurantInfo(results))
-      })
+      $("#restaurants").append(restaurantInfo(results));
+    });
   }
 
   (async () => {
@@ -32,6 +32,24 @@ export function airportUI() {
     console.log(response);
     response.results.forEach(function(results) {
       $("#shops").append(storeInfo(results));
-      })
+    });
   }
 }
+
+
+
+ 
+//  (async () => {
+//    let map = new Map();
+
+//    const response = await map.getImage(restaurantImageId);
+//    getImageElements(response);
+//    console.log(response);
+//  }) ();
+//  function  getImageElements(response) {
+//    console.log(response);
+//    response.results.forEach(function(results) {
+//      $("#restaurants").append(restaurantImages(results));
+//      })
+//    }
+

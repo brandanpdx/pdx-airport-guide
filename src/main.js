@@ -10,7 +10,9 @@ import { flightTimes } from './pdx-flight-times.js';
 $(document).ready(function() {
   airportUI();
   flightTrackerUI();
+
   flightTimes();
+
 });
 
 
